@@ -4,7 +4,6 @@ from .deck import generate_dino_deck, get_random_attr, split_deck
 
 # IMPORT ABSOLUTO =>
 # from top_dino.deck import generate_dino_deck
-# import top_dino -> NESSE CASO PRECISA REFERENCIAR NO __init__.py
 
 
 def play():
