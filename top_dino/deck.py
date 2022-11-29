@@ -9,16 +9,15 @@ DINO_NAMES = (
     "Gustarodáctilo",
 )
 
+
 """
 FORMA MAIS BASICA =>
-    def generate_dino_deck():
-        dino_cards = []
-
-        for dino_name in DINO_NAMES:
-            dino_dict = {"name": dino_name, "strength": 2, "agility": 4, "heigth": 1}
-
-            dino_cards.append(dino_dict)
-        return dino_cards
+def generate_dino_deck():
+    dino_cards = []
+    for dino_name in DINO_NAMES:
+        dino_dict = {"name": dino_name, "strength": 2, "agility": 4, "heigth": 1}
+        dino_cards.append(dino_dict)
+    return dino_cards
 """
 
 
@@ -29,7 +28,6 @@ def generate_dino_deck():
         - ENTRUTURAR NOVA LISTA COM NOVAS PRORPIEDADES: "strength, agility, heigth"
         - RETORNAR A NOVA LISTA
     """
-
     dino = [
         {
             "name": dino_name,
@@ -49,14 +47,10 @@ def split_deck(deck: list[dict]) -> tuple[list[dict], list[dict]]:
 
     random.shuffle(deck)  # EMBARALHANDO O DECK
 
-    print("deck 1")
-    for card in deck[:half_deck]:  # deck[:3]
-        print(card)
-
-    print()
-
-    print("deck 2")
-    for card in deck[half_deck:]:  # deck[3:]
-        print(card)
-
     return (deck[half_deck:], deck[:half_deck])
+
+
+def get_random_attr(card: dict) -> str:
+    card_keys = [key for key in card.keys() if key != "name"]
+
+    return random.choice(card_keys)
