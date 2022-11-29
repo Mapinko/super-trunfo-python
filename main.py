@@ -1,7 +1,7 @@
 import top_dino
 
 
-def main():
+def main() -> None:
     top_dino.play()
 
 

@@ -1,4 +1,5 @@
 # IMPORT RELATIVO =>
+from .battle import battle_printing
 from .deck import generate_dino_deck, get_random_attr, split_deck
 
 # IMPORT ABSOLUTO =>
@@ -12,14 +13,11 @@ def play():
 
     # 2 - Embaralhar e dividir o baralho em 2
     p1_deck, p2_deck = split_deck(dino_deck)
-    # p1_deck, p2_deck => desempacotando o retorno
+    # p1_deck, p2_deck => DESEMPACOTA O RETORNO
 
-    print("deck 1")
-    for card in p1_deck:
-        print(card)
+    for index, p1_card in enumerate(p1_deck):
+        attr_to_compare = get_random_attr(p1_card)
+        p2_card = p2_deck[index]
 
-    print()
-
-    print("deck 2")
-    for card in p2_deck:
-        print(card)
+        print()
+        battle_printing(p1_card, p2_card, attr_to_compare)
