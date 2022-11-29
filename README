@@ -1,0 +1,15 @@
+    SUPER TRUNFO
+
+- CARTAS:
+    - Cartas dever ser dicionários com os seguintes atributos:
+        - name (nome da carta)
+        - strength (int, 1 a 10)
+        - agility (float, 0 a 10, 1 casa decimal, ex: 5.1)
+        - heigth (float, 0 a 10, 2 casas decimais, ex: 2.32)
+    - Os valores dos atributos devem ser distribuídos randomicamente;
+    - As cartas devem ser embaralhadas e divididas igualmente entre os 2 players antes de começar o jogo;
+
+- JOGO:
+    - Deve ser escolhido um atributo aleatório para a batalha entre cartas de cada player;
+    - O atributo com maior valor vence;
+    - Adicionar prints para relatório das batalhas;
